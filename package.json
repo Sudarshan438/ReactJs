@@ -1,0 +1,31 @@
+{
+  "name": "namaste-react-438",
+  "version": "1.0.0",
+  "description": "This is Namaste react course",
+  "scripts": {
+    "start": "rm -rf .parcel-cache && npx parcel index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sudarshan438/ReactJs.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Sudarshan438",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sudarshan438/ReactJs/issues"
+  },
+  "homepage": "https://github.com/Sudarshan438/ReactJs#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
