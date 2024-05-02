@@ -143,5 +143,24 @@ How react works under the hood
   2) Commit phase (Updating dom, side effects and schedule updates)
 
  *** When there are multiple child instances what react does is first it batches up the render phase for all child components and then as commit phase takes time for doing dom manipulation it batches up the commit phase for all child components later after the render phase is done
+
+
+ *** Life cycle hooks with diagram
+ /// Mounting
+
+    Constructor
+    Render
+      <Html>Dummy data</Html>
+    ComponentDidMount
+      API call
+      State Updates
+
+/// Updating
+    Render
+      <Html>with New State/Props data or force Update</Html>
+    ComponentDidUpdate
+
+//// Unmounting
+    componentWillUnmount
   
 

@@ -18,7 +18,13 @@ class About extends Component {
     console.log("Parent constructor");
   }
   componentDidMount() {
+    this.timer = setInterval(() => {
+      console.log("Set Interval OP")
+    }, 1000);
     console.log("Parent ComponentDidMount");
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
   render() {
     console.log("Parent render");
