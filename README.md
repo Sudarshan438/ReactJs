@@ -162,5 +162,14 @@ How react works under the hood
 
 //// Unmounting
     componentWillUnmount
+
+
+/**
+ * Code splitting
+ * Dynamic bundling
+ * chunking
+ * lazy loading
+ * on demand loading
+ */
   
 
