@@ -171,5 +171,33 @@ How react works under the hood
  * lazy loading
  * on demand loading
  */
+
+
+ // Higher order component
+  Takes a component and return a enhanced component
+  HOC's are pure functions (Meaning it'll not change the behavior of the original/input component it just adds few thing on top of it)
+ 
   
+// Redux (Redux tool kit) - RTK
+  - Install @reduxjs/toolkit and react-redux
+  - Build our store
+  - Connect our store to the application
+  - Create a Cart Slice
+  - Dispatch an action
+  - Update the store with reducer
+  - Subscribe the state with selector hook
+
+1) configureStore --> "@reduxjs/toolkit"
+  used to create a central store and its takes a configuration object
+  which contains "reducer"(singular as it'll be one whole reducer of entire application) as a key and its value is an object which contains
+  slices of individual reducers
+2) createSlice() --> "@reduxjs/toolkit"
+  Takes a config object where we'll defined name and reducers(Plural not singular) key which holds action name as key and its reducer value as values
+  it returns an Object container keys such as actions, reducer etc.
+  here we'll export slice.reducer --> each slice we'll have a single reducer
+  and also actions 
+3) Once you have the store created you can provide to the application using Provider component --> (Path) "react-redux"
+4) You can subscribe to store using useSelector hook
+5) You can dispatch actions using return value of useDispatch
+6) while calling dispatch(action()) make sure you'll invoke the action in the argument of dispatch
 

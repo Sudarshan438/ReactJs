@@ -1619,3 +1619,34 @@ const MOCK_DATA = [{
 ];
 
 export default MOCK_DATA;
+
+export const RESTAURANT_RECOMMENDED = [
+  {
+    id: 1,
+    name: "Recommended",
+    items: [
+      {
+        id: 11,
+        name: "Biryani",
+      },
+      {
+        id: 12,
+        name: "Noodles",
+      }
+    ],
+  },
+  {
+    id: 2,
+    name: "New Restaurants",
+    items: [
+      {
+        id: 21,
+        name: "Ice creams",
+      },
+      {
+        id: 22,
+        name: "Thich shakes",
+      }
+    ],
+  }
+]

@@ -14,4 +14,13 @@ const RestaurantCard = ({resData}) => {
     )
 };
 
+export const withBestRatingLabel = (RestaurantCard) => {
+    return (props) => {
+        return <>
+            <label className="absolute bg-black text-white m-4 p-2 rounded-lg">Best Rating</label>
+            <RestaurantCard {...props}></RestaurantCard>
+        </>
+    }
+}
+
 export default RestaurantCard;

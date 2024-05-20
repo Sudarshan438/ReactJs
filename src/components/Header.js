@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/CustomHooks/useOnlineStatus";
+import UserContext from "../utils/Contexts/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
-    console.log("Fresh component render");
     const [btnText, setBtnText] = useState('Login');
     const onlineStatus = useOnlineStatus();
+    const {items: cartItems} = useSelector((store) => store.cart);
+    const data = useContext(UserContext);
+    console.log({data});
     const toggleBtnText = () => {
         btnText === 'Login' ? setBtnText('Logout') : setBtnText('Login');
     }
@@ -22,10 +26,11 @@ const Header = () => {
                     <li className="px-4"><Link to="/about">About Us</Link></li>
                     <li className="px-4"><Link to="/contact">Contact us</Link></li>
                     <li className="px-4"><Link to="/grocery">Grocery</Link></li>
-                    <li className="px-4">Cart</li>
-                    <li>
+                    <li className="px-4"><Link to="/cart">Cart</Link> - {cartItems?.length}</li>
+                    <li className="px-4">
                     <button onClick={toggleBtnText}>{btnText}</button>
                     </li>
+                    <li className="font-bold">{data.loggedInUser}</li>
                 </ul>
             </div>
         </div>
